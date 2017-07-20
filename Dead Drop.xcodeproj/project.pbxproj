@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		346C031D607C61183E70F65A /* Pods_Dead_Drop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773E64EA5A0BF30C2807B01D /* Pods_Dead_Drop.framework */; };
 		7AEE79F01F21159C00339699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE79EF1F21159C00339699 /* AppDelegate.swift */; };
 		7AEE79F21F21159C00339699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE79F11F21159C00339699 /* ViewController.swift */; };
 		7AEE79F51F21159C00339699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE79F31F21159C00339699 /* Main.storyboard */; };
 		7AEE79F71F21159C00339699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE79F61F21159C00339699 /* Assets.xcassets */; };
 		7AEE79FA1F21159C00339699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE79F81F21159C00339699 /* LaunchScreen.storyboard */; };
+		7AFABB7B1F211961007943E2 /* ParseBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFABB7A1F211961007943E2 /* ParseBridgingHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		773E64EA5A0BF30C2807B01D /* Pods_Dead_Drop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dead_Drop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AEE79EC1F21159C00339699 /* Dead Drop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dead Drop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AEE79EF1F21159C00339699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AEE79F11F21159C00339699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,10 @@
 		7AEE79F61F21159C00339699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AEE79F91F21159C00339699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AEE79FB1F21159C00339699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AFABB791F211961007943E2 /* Dead Drop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dead Drop-Bridging-Header.h"; sourceTree = "<group>"; };
+		7AFABB7A1F211961007943E2 /* ParseBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgingHeader.m; sourceTree = "<group>"; };
+		8A36B33E8018C2C595231342 /* Pods-Dead Drop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dead Drop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dead Drop/Pods-Dead Drop.debug.xcconfig"; sourceTree = "<group>"; };
+		9AC188B0E5497E37D1BD27DF /* Pods-Dead Drop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dead Drop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dead Drop/Pods-Dead Drop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346C031D607C61183E70F65A /* Pods_Dead_Drop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E879C790DFF785E235AE76E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A36B33E8018C2C595231342 /* Pods-Dead Drop.debug.xcconfig */,
+				9AC188B0E5497E37D1BD27DF /* Pods-Dead Drop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7AEE79E31F21159C00339699 = {
 			isa = PBXGroup;
 			children = (
+				7AFABB7A1F211961007943E2 /* ParseBridgingHeader.m */,
 				7AEE79EE1F21159C00339699 /* Dead Drop */,
 				7AEE79ED1F21159C00339699 /* Products */,
+				1E879C790DFF785E235AE76E /* Pods */,
+				AF661D70EDF7F72428904ABD /* Frameworks */,
+				7AFABB791F211961007943E2 /* Dead Drop-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +85,14 @@
 			path = "Dead Drop";
 			sourceTree = "<group>";
 		};
+		AF661D70EDF7F72428904ABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				773E64EA5A0BF30C2807B01D /* Pods_Dead_Drop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AEE79FE1F21159C00339699 /* Build configuration list for PBXNativeTarget "Dead Drop" */;
 			buildPhases = (
+				58C07D5746BFAC78BE93C1E6 /* [CP] Check Pods Manifest.lock */,
 				7AEE79E81F21159C00339699 /* Sources */,
 				7AEE79E91F21159C00339699 /* Frameworks */,
 				7AEE79EA1F21159C00339699 /* Resources */,
+				78792C8B01BE59D5E2A1872A /* [CP] Embed Pods Frameworks */,
+				1D9CBCD176BC87EB14096A41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +129,7 @@
 					7AEE79EB1F21159C00339699 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = K9KEJDHY56;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,11 +165,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D9CBCD176BC87EB14096A41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dead Drop/Pods-Dead Drop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58C07D5746BFAC78BE93C1E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78792C8B01BE59D5E2A1872A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dead Drop/Pods-Dead Drop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AEE79E81F21159C00339699 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFABB7B1F211961007943E2 /* ParseBridgingHeader.m in Sources */,
 				7AEE79F21F21159C00339699 /* ViewController.swift in Sources */,
 				7AEE79F01F21159C00339699 /* AppDelegate.swift in Sources */,
 			);
@@ -261,26 +343,33 @@
 		};
 		7AEE79FF1F21159C00339699 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A36B33E8018C2C595231342 /* Pods-Dead Drop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K9KEJDHY56;
 				INFOPLIST_FILE = "Dead Drop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "IO.Maranville.Dead-Drop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dead Drop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7AEE7A001F21159C00339699 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC188B0E5497E37D1BD27DF /* Pods-Dead Drop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = K9KEJDHY56;
 				INFOPLIST_FILE = "Dead Drop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "IO.Maranville.Dead-Drop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dead Drop-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -304,6 +393,7 @@
 				7AEE7A001F21159C00339699 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
