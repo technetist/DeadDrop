@@ -14,6 +14,7 @@
 		7AEE79F71F21159C00339699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE79F61F21159C00339699 /* Assets.xcassets */; };
 		7AEE79FA1F21159C00339699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AEE79F81F21159C00339699 /* LaunchScreen.storyboard */; };
 		7AFABB7B1F211961007943E2 /* ParseBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFABB7A1F211961007943E2 /* ParseBridgingHeader.m */; };
+		7AFABB7D1F215465007943E2 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFABB7C1F215465007943E2 /* UsersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		7AEE79FB1F21159C00339699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AFABB791F211961007943E2 /* Dead Drop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dead Drop-Bridging-Header.h"; sourceTree = "<group>"; };
 		7AFABB7A1F211961007943E2 /* ParseBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridgingHeader.m; sourceTree = "<group>"; };
+		7AFABB7C1F215465007943E2 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		8A36B33E8018C2C595231342 /* Pods-Dead Drop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dead Drop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dead Drop/Pods-Dead Drop.debug.xcconfig"; sourceTree = "<group>"; };
 		9AC188B0E5497E37D1BD27DF /* Pods-Dead Drop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dead Drop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dead Drop/Pods-Dead Drop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				7AEE79EF1F21159C00339699 /* AppDelegate.swift */,
 				7AEE79F11F21159C00339699 /* ViewController.swift */,
 				7AEE79F31F21159C00339699 /* Main.storyboard */,
+				7AFABB7C1F215465007943E2 /* UsersTableViewController.swift */,
 				7AEE79F61F21159C00339699 /* Assets.xcassets */,
 				7AEE79F81F21159C00339699 /* LaunchScreen.storyboard */,
 				7AEE79FB1F21159C00339699 /* Info.plist */,
@@ -220,6 +223,7 @@
 			files = (
 				7AFABB7B1F211961007943E2 /* ParseBridgingHeader.m in Sources */,
 				7AEE79F21F21159C00339699 /* ViewController.swift in Sources */,
+				7AFABB7D1F215465007943E2 /* UsersTableViewController.swift in Sources */,
 				7AEE79F01F21159C00339699 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
