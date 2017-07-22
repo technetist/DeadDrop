@@ -15,6 +15,72 @@ class UsersTableViewController: UITableViewController, UINavigationControllerDel
     
     var recipientUsername = ""
     
+    func checkForMessages() {
+        let query = PFQuery(className: "Image")
+        query.whereKey("recipient", equalTo: (PFUser.current()?.username)!)
+        do {
+            let images = try query.findObjects()
+            if images.count > 0 {
+                
+                    var senderUsername = "Unknown User"
+                    if let username = images[0]["senderUsername"] as? String {
+                        senderUsername = username
+                    }
+                    
+                    if let pfFile = images[0]["photo"] as? PFFile {
+                        pfFile.getDataInBackground(block: { (data, error) in
+                            if let imageData = data {
+                                
+                                images[0].deleteInBackground()
+                                
+                                self.timer.invalidate()
+                                if let imageToDisplay = UIImage(data: imageData) {
+                                    let alertController = UIAlertController(title: "Message Waiting", message: "Message from \(senderUsername)", preferredStyle: .alert)
+                                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                                        
+                                        let backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+                                        backgroundImageView.backgroundColor = UIColor.black
+                                        backgroundImageView.alpha = 0.8
+                                        backgroundImageView.tag = 10
+                                        self.view.addSubview(backgroundImageView)
+                                        
+                                        let displayedImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+                                        
+                                        displayedImageView.image = imageToDisplay
+                                        displayedImageView.tag = 10
+                                        displayedImageView.contentMode = UIViewContentMode.scaleAspectFit
+                                        
+                                        self.view.addSubview(displayedImageView)
+                                        
+                                        _ = Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (timer) in
+                                            
+                                            self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(UsersTableViewController.checkForMessages), userInfo: nil, repeats: true)
+                                            
+                                            
+                                            for subview in self.view.subviews {
+                                                if subview.tag == 10 {
+                                                    subview.removeFromSuperview()
+                                                }
+                                            }
+                                        })
+                                        
+                                    }))
+                                    self.present(alertController, animated: true, completion: nil)
+                                }
+                            }
+                        })
+                    
+                    
+                }
+            }
+        } catch {
+            print("Could not get images")
+        }
+        
+    }
+    
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,9 +91,8 @@ class UsersTableViewController: UITableViewController, UINavigationControllerDel
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.navigationController?.navigationBar.isHidden = false
         
-        _ = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
-            print("Timer Activated")
-        })
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(UsersTableViewController.checkForMessages), userInfo: nil, repeats: true)
+        
         
         let query = PFUser.query()
         query?.whereKey("username", notEqualTo: (PFUser.current()?.username)!)
